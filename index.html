@@ -1,143 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dastarkhwan — Desi Recipes Worth Cooking Twice</title>
-<meta name="description" content="Dastarkhwan is a home for authentic Pakistani and desi recipes — biryani, karahi, kebabs, snacks, and desserts, with step-by-step instructions.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Literata:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasi Khana - Authentic Homemade Recipes</title>
+  <style>
+    :root {
+      --primary: #e67e22;
+      --dark: #2c3e50;
+      --light: #f9f9f9;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--dark);
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-top: 5px;
+    }
+
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: var(--dark);
+      margin-bottom: 20px;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .recipe-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eaeaea;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-card h3 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      text-transform: capitalize;
+      margin-bottom: 12px;
+    }
+
+    .recipe-card p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #d35400;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="brand"><span class="lantern">🍽️</span>Dastarkhwan<small>Desi recipes worth cooking twice</small></a>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" class="active">Recipes</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      </ul>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-  </div>
-</header>
+  <header>
+    <h1>🍲 Dasi Khana</h1>
+    <p>Daily Homemade Fresh Recipes & Cooking Ideas</p>
+  </header>
 
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">19 recipes and counting</p>
-    <h1>Desi food, cooked <em>the way ammi taught us.</em></h1>
-    <p class="lede">Authentic Pakistani recipes — biryani, karahi, BBQ, snacks, and desserts — with exact ingredients, real timings, and step-by-step instructions.</p>
-  </div>
-</section>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#about">About</a>
+  </nav>
 
-<main class="wrap">
-
-  <div class="section-head">
-    <h2>All Recipes</h2>
-    <span class="sub" id="recipe-count"></span>
-  </div>
-
-  <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:32px;">
-    <input id="recipe-search" type="search" placeholder="Search recipes by name…"
-      style="flex:1; min-width:220px; background:var(--ink-2); border:1px solid rgba(214,162,75,0.2); border-radius:3px; padding:11px 14px; color:var(--ink-text); font-family:var(--ui); font-size:.9rem;">
-    <div class="category-filters" id="category-filters"></div>
-  </div>
-
-  <div <div class="recipe-grid" id="latest-recipes-container"></div>
-
-  <!-- Ad placement — replace with your AdSense unit once approved -->
-  <div class="ad-slot">Advertisement space</div>
-
-  <div class="cta-strip">
-    <div>
-      <h3>Never miss a recipe</h3>
-      <p>One new recipe in your inbox, every week. No spam, unsubscribe anytime.</p>
-    </div>
-    <form class="cta-form" data-demo-form>
-      <input type="email" placeholder="you@example.com" required aria-label="Email address">
-      <button class="btn" type="submit">Subscribe</button>
-    </form>
-  </div>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4>Dastarkhwan</h4>
-        <p>A home for authentic Pakistani and desi recipes, tested and written to actually work in a home kitchen.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.html">All Recipes</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="contact.html">Get in Touch</a></li>
-        </ul>
+  <div class="container">
+    
+    <h2 class="section-title" id="recipes">Latest Recipes</h2>
+    
+    <!-- Dynamic recipes generated by n8n will load here -->
+    <div class="recipe-grid" id="latest-recipes-container">
+      <div style="text-align: center; width: 100%; grid-column: 1 / -1; color: #888; padding: 20px;">
+        Checking for latest recipes...
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Dastarkhwan. All recipes original unless credited.</span>
-      <span>Built with care, one dish at a time.</span>
-    </div>
-  </div>
-</footer>
 
-<script src="recipes-data.js"></script>
-<script src="recipe-list.js"></script>
-<script src="script.js"></script>
-</body>
-  <!-- Automatic Recipe Loader Script -->
-<script>
-async function loadLatestRecipes() {
-  try {
-    const owner = 'ummetehmina';
-    const repo = 'dasi-khana-';
-    
-    // GitHub API se repository ki files fetch karna
-    const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/`);
-    const files = await response.json();
-    
-    // Sirf 'recipe-' se shuru hone wali html files filter karna
-    const recipeFiles = files.filter(file => file.name.startsWith('recipe-') && file.name.endsWith('.html'));
-    
-    // Latest recipe sab se upar dikhanay ke liye sort karna
-    recipeFiles.sort((a, b) => b.name.localeCompare(a.name));
-    
-    // Jis div/container mein links dikhane hain (Aap apne container ki ID yahan set kar sakti hain)
-    const container = document.getElementById('latest-recipes-container');
-    
-    if (container && recipeFiles.length > 0) {
-      container.innerHTML = ''; // Pehle se majood static list ko clear karna
-      
-      recipeFiles.forEach(file => {
-        const title = file.name.replace('.html', '').replace('recipe-', '').replaceAll('-', ' ');
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Dasi Khana. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Automatic GitHub Recipe Fetcher Script -->
+  <script>
+    async function loadLatestRecipes() {
+      try {
+        const owner = 'ummetehmina';
+        const repo = 'dasi-khana-';
         
-        const card = document.createElement('div');
-        card.style.cssText = "margin: 10px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px;";
-        card.innerHTML = `<h3 style="text-transform: capitalize;"><a href="${file.name}">${title}</a></h3>`;
+        const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/`);
+        const files = await response.json();
         
-        container.appendChild(card);
-      });
+        // Filter out recipe files (recipe-YYYY-MM-DD.html)
+        const recipeFiles = files.filter(file => file.name.startsWith('recipe-') && file.name.endsWith('.html'));
+        
+        // Sort newest first
+        recipeFiles.sort((a, b) => b.name.localeCompare(a.name));
+        
+        const container = document.getElementById('latest-recipes-container');
+        
+        if (container) {
+          container.innerHTML = ''; // Clear loading placeholder
+          
+          if (recipeFiles.length === 0) {
+            container.innerHTML = '<p style="grid-column: 1/-1;">Abhi koi recipe uploaded nahi hai.</p>';
+            return;
+          }
+
+          recipeFiles.forEach(file => {
+            const cleanTitle = file.name
+              .replace('.html', '')
+              .replace('recipe-', '')
+              .replaceAll('-', ' ');
+            
+            const card = document.createElement('div');
+            card.className = 'recipe-card';
+            card.innerHTML = `
+              <div>
+                <h3>🍲 ${cleanTitle}</h3>
+                <p>Nayi desi recipe post, detail parhne ke liye niche click karein.</p>
+              </div>
+              <a href="${file.name}" class="btn">View Full Recipe →</a>
+            `;
+            
+            container.appendChild(card);
+          });
+        }
+      } catch (error) {
+        console.error("Error loading recipes:", error);
+      }
     }
-  } catch (error) {
-    console.error("Recipes load karne mein error aaya:", error);
-  }
-}
 
-// Page load hote hi script run karein
-window.addEventListener('DOMContentLoaded', loadLatestRecipes);
-</script>
+    window.addEventListener('DOMContentLoaded', loadLatestRecipes);
+  </script>
+
+</body>
 </html>

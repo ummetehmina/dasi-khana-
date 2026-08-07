@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dastarkhwan</title>
+<meta name="description" content="Get in touch with the Dastarkhwan team — suggest a recipe, report a correction, or just say hello.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Literata:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="lantern">🍽️</span>Dastarkhwan<small>Desi recipes worth cooking twice</small></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<div class="wrap page-header">
+  <p class="eyebrow">Say hello</p>
+  <h1>Get in touch</h1>
+</div>
+
+<div class="wrap page-body">
+  <p>Whether you have a recipe to suggest, a correction to point out, or just want to tell us how a dish turned out — we read every message.</p>
+
+  <form class="contact-form" data-demo-form>
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button class="btn" type="submit">Send message</button>
+    <p class="form-response form-note"></p>
+  </form>
+
+  <p class="form-note" style="margin-top:28px;">This form is a front-end demo — connect it to a backend or a service like Formspree, Netlify Forms, or your own mail handler to receive real submissions.</p>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Dastarkhwan</h4>
+        <p>A home for authentic Pakistani and desi recipes, tested and written to actually work in a home kitchen.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">All Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dastarkhwan. All recipes original unless credited.</span>
+      <span>Built with care, one dish at a time.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

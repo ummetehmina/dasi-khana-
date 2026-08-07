@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dastarkhwan — Desi Recipes Worth Cooking Twice</title>
+<meta name="description" content="Dastarkhwan is a home for authentic Pakistani and desi recipes — biryani, karahi, kebabs, snacks, and desserts, with step-by-step instructions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Literata:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="lantern">🍽️</span>Dastarkhwan<small>Desi recipes worth cooking twice</small></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">19 recipes and counting</p>
+    <h1>Desi food, cooked <em>the way ammi taught us.</em></h1>
+    <p class="lede">Authentic Pakistani recipes — biryani, karahi, BBQ, snacks, and desserts — with exact ingredients, real timings, and step-by-step instructions.</p>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <div class="section-head">
+    <h2>All Recipes</h2>
+    <span class="sub" id="recipe-count"></span>
+  </div>
+
+  <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:32px;">
+    <input id="recipe-search" type="search" placeholder="Search recipes by name…"
+      style="flex:1; min-width:220px; background:var(--ink-2); border:1px solid rgba(214,162,75,0.2); border-radius:3px; padding:11px 14px; color:var(--ink-text); font-family:var(--ui); font-size:.9rem;">
+    <div class="category-filters" id="category-filters"></div>
+  </div>
+
+  <div class="story-grid" id="recipe-grid"></div>
+
+  <!-- Ad placement — replace with your AdSense unit once approved -->
+  <div class="ad-slot">Advertisement space</div>
+
+  <div class="cta-strip">
+    <div>
+      <h3>Never miss a recipe</h3>
+      <p>One new recipe in your inbox, every week. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="cta-form" data-demo-form>
+      <input type="email" placeholder="you@example.com" required aria-label="Email address">
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Dastarkhwan</h4>
+        <p>A home for authentic Pakistani and desi recipes, tested and written to actually work in a home kitchen.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">All Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dastarkhwan. All recipes original unless credited.</span>
+      <span>Built with care, one dish at a time.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="recipes-data.js"></script>
+<script src="recipe-list.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

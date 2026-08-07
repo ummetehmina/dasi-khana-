@@ -47,7 +47,7 @@
     <div class="category-filters" id="category-filters"></div>
   </div>
 
-  <div class="story-grid" id="recipe-grid"></div>
+  <div <div class="recipe-grid"></div>
 
   <!-- Ad placement — replace with your AdSense unit once approved -->
   <div class="ad-slot">Advertisement space</div>
@@ -99,4 +99,45 @@
 <script src="recipe-list.js"></script>
 <script src="script.js"></script>
 </body>
+  <!-- Automatic Recipe Loader Script -->
+<script>
+async function loadLatestRecipes() {
+  try {
+    const owner = 'ummetehmina';
+    const repo = 'dasi-khana-';
+    
+    // GitHub API se repository ki files fetch karna
+    const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/`);
+    const files = await response.json();
+    
+    // Sirf 'recipe-' se shuru hone wali html files filter karna
+    const recipeFiles = files.filter(file => file.name.startsWith('recipe-') && file.name.endsWith('.html'));
+    
+    // Latest recipe sab se upar dikhanay ke liye sort karna
+    recipeFiles.sort((a, b) => b.name.localeCompare(a.name));
+    
+    // Jis div/container mein links dikhane hain (Aap apne container ki ID yahan set kar sakti hain)
+    const container = document.getElementById('latest-recipes-container');
+    
+    if (container && recipeFiles.length > 0) {
+      container.innerHTML = ''; // Pehle se majood static list ko clear karna
+      
+      recipeFiles.forEach(file => {
+        const title = file.name.replace('.html', '').replace('recipe-', '').replaceAll('-', ' ');
+        
+        const card = document.createElement('div');
+        card.style.cssText = "margin: 10px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px;";
+        card.innerHTML = `<h3 style="text-transform: capitalize;"><a href="${file.name}">${title}</a></h3>`;
+        
+        container.appendChild(card);
+      });
+    }
+  } catch (error) {
+    console.error("Recipes load karne mein error aaya:", error);
+  }
+}
+
+// Page load hote hi script run karein
+window.addEventListener('DOMContentLoaded', loadLatestRecipes);
+</script>
 </html>
